@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/line-flex-message-preview/static/css/main.6383a988.css",
+    "main.js": "/line-flex-message-preview/static/js/main.7919b815.js",
+    "static/js/488.ff6fa557.chunk.js": "/line-flex-message-preview/static/js/488.ff6fa557.chunk.js",
+    "index.html": "/line-flex-message-preview/index.html",
+    "main.6383a988.css.map": "/line-flex-message-preview/static/css/main.6383a988.css.map",
+    "main.7919b815.js.map": "/line-flex-message-preview/static/js/main.7919b815.js.map",
+    "488.ff6fa557.chunk.js.map": "/line-flex-message-preview/static/js/488.ff6fa557.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6383a988.css",
+    "static/js/main.7919b815.js"
+  ]
+}
