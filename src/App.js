@@ -221,10 +221,10 @@ function App() {
     <DragDropContext onDragEnd={handleDragEnd}>
       <div className="app">
         <PanelGroup direction="horizontal">
-          <Panel defaultSize={30} minSize={20} maxSize={40}>
+          <Panel defaultSize={40} minSize={30}>
             <div className="editor-panel">
               <PanelGroup direction="horizontal">
-                <Panel defaultSize={40} minSize={30} maxSize={70}>
+                <Panel defaultSize={50} minSize={40} maxSize={60}>
                   <div className="panel-header">
                     <h2 className="panel-title">コンポーネント</h2>
                   </div>
@@ -252,7 +252,7 @@ function App() {
                 
                 <ResizeHandle />
                 
-                <Panel defaultSize={60}>
+                <Panel defaultSize={50} minSize={40}>
                   <div className="panel-header">
                     <h2 className="panel-title">プロパティ</h2>
                   </div>
@@ -271,7 +271,7 @@ function App() {
 
           <ResizeHandle />
 
-          <Panel defaultSize={40}>
+          <Panel defaultSize={30}>
             <div className="preview-panel">
               <div className="panel-header">
                 <h2 className="panel-title">プレビュー</h2>
