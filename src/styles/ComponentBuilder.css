@@ -1,0 +1,99 @@
+.component-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.component-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+
+.component-button:hover {
+  background: #f8f9fa;
+  border-color: #00B900;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 185, 0, 0.1);
+}
+
+.component-button:active {
+  transform: translateY(0);
+}
+
+.component-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #f1f8f1;
+  border-radius: 6px;
+  color: #00B900;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.component-text {
+  flex: 1;
+}
+
+.component-text-label {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.component-text-description {
+  font-size: 11px;
+  color: #666;
+}
+
+/* コンポーネントタイプごとのアイコン */
+.component-button[data-type="text"] .component-icon::before {
+  content: "T";
+  font-weight: bold;
+}
+
+.component-button[data-type="button"] .component-icon::before {
+  content: "⬢";
+}
+
+.component-button[data-type="separator"] .component-icon::before {
+  content: "―";
+}
+
+.component-button[data-type="image"] .component-icon::before {
+  content: "🖼";
+}
+
+/* ホバー時のアニメーション効果 */
+.component-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0, 185, 0, 0.1) 0%, rgba(0, 185, 0, 0) 70%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s;
+  pointer-events: none;
+}
+
+.component-button:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+} 
