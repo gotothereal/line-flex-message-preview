@@ -1,0 +1,129 @@
+.box-list {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.box-list-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.box-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.box-item {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.box-item.selected {
+  border-color: #007bff;
+  background-color: #e3f2fd;
+}
+
+.box-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #f1f3f5;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.box-item-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.box-layout-badge {
+  padding: 0.25rem 0.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.box-content-count {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.box-item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.box-action-button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.box-action-button:hover {
+  background-color: #f8f9fa;
+}
+
+.box-action-button.primary {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.box-action-button.primary:hover {
+  background-color: #0056b3;
+}
+
+.box-action-button.delete {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.box-action-button.delete:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.box-item-content {
+  padding: 0.5rem;
+  min-height: 2rem;
+  cursor: pointer;
+}
+
+.box-content-item {
+  padding: 0.25rem 0.5rem;
+  background-color: #e9ecef;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  color: #495057;
+  margin: 0.25rem 0;
+}
+
+.box-empty-state {
+  padding: 2rem;
+  text-align: center;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
