@@ -1,0 +1,75 @@
+.json-preview {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.json-preview-header {
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.json-preview-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.copy-button {
+  padding: 0.5rem 1rem;
+  background-color: #00B900;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copy-button:hover {
+  background-color: #009900;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.copy-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.json-content {
+  margin: 0;
+  padding: 1.5rem;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.json-content code {
+  display: block;
+  white-space: pre;
+}
+
+/* シンタックスハイライト */
+.json-content .string { color: #ce9178; }
+.json-content .number { color: #b5cea8; }
+.json-content .boolean { color: #569cd6; }
+.json-content .null { color: #569cd6; }
+.json-content .key { color: #9cdcfe; } 
