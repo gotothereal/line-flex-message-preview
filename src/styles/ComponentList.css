@@ -17,6 +17,7 @@
 .component-list-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 8px 12px;
   background: white;
   border: 1px solid #ddd;

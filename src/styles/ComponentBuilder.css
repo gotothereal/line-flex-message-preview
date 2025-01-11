@@ -6,6 +6,8 @@
   background: white;
   border-radius: 8px;
   margin-bottom: 16px;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .component-button {
