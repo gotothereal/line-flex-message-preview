@@ -100,9 +100,9 @@ function App() {
       const currentContent = JSON.parse(JSON.stringify(preview));
       const updateComponentInContents = (contents) => {
         for (let i = 0; i < contents.length; i++) {
-          if (contents[i] === selectedComponent || 
-              JSON.stringify(contents[i]) === JSON.stringify(selectedComponent)) {
-            contents[i] = { ...updatedComponent };
+          if (contents[i].type === selectedComponent.type && 
+              contents[i].action?.label === selectedComponent.action?.label) {
+            contents[i] = updatedComponent;
             return true;
           }
           if (contents[i].contents) {
@@ -114,14 +114,25 @@ function App() {
         return false;
       };
 
+      // セクション内のコンポーネントを更新
       if (currentContent.body && currentContent.body.contents) {
         if (updateComponentInContents(currentContent.body.contents)) {
           setPreview(currentContent);
-          setComponents(parseJsonToComponents(currentContent));
           setJsonInput(JSON.stringify(currentContent, null, 2));
-          setSelectedComponent({ ...updatedComponent, parent: 'body' });
+          setSelectedComponent(updatedComponent);
+          return;
         }
       }
+
+      // セクション自体を更新
+      if (selectedComponent.type === 'header') currentContent.header = updatedComponent;
+      if (selectedComponent.type === 'hero') currentContent.hero = updatedComponent;
+      if (selectedComponent.type === 'body') currentContent.body = updatedComponent;
+      if (selectedComponent.type === 'footer') currentContent.footer = updatedComponent;
+
+      setPreview(currentContent);
+      setJsonInput(JSON.stringify(currentContent, null, 2));
+      setSelectedComponent(updatedComponent);
     } catch (err) {
       console.error('Failed to update component:', err);
       setError('Failed to update component');
